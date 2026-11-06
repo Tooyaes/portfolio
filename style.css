@@ -1,0 +1,200 @@
+/* Neovim CLI Portfolio Style */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root, [data-theme="tokyo-night"] {
+  --bg-primary: #1a1b26;
+  --bg-secondary: #16161e;
+  --bg-surface: #24283b;
+  --bg-highlight: #292e42;
+  --border-color: #414868;
+  --text-primary: #c0caf5;
+  --text-muted: #565f89;
+  --text-subtle: #7aa2f7;
+  
+  --accent-cyan: #7dcfff;
+  --accent-blue: #7aa2f7;
+  --accent-magenta: #bb9af7;
+  --accent-green: #9ece6a;
+  --accent-orange: #ff9e64;
+  --accent-yellow: #e0af68;
+  --accent-red: #f7768e;
+
+  --lualine-mode-bg: #7aa2f7;
+  --lualine-mode-fg: #15161e;
+  --lualine-git-bg: #24283b;
+  --lualine-git-fg: #7aa2f7;
+}
+
+[data-theme="catppuccin"] {
+  --bg-primary: #1e1e2e;
+  --bg-secondary: #181825;
+  --bg-surface: #313244;
+  --bg-highlight: #45475a;
+  --border-color: #585b70;
+  --text-primary: #cdd6f4;
+  --text-muted: #6c7086;
+  --text-subtle: #89b4fa;
+
+  --accent-cyan: #89dceb;
+  --accent-blue: #89b4fa;
+  --accent-magenta: #cba6f7;
+  --accent-green: #a6e3a1;
+  --accent-orange: #fab387;
+  --accent-yellow: #f9e2af;
+  --accent-red: #f38ba8;
+
+  --lualine-mode-bg: #cba6f7;
+  --lualine-mode-fg: #11111b;
+  --lualine-git-bg: #313244;
+  --lualine-git-fg: #cba6f7;
+}
+
+[data-theme="gruvbox"] {
+  --bg-primary: #282828;
+  --bg-secondary: #1d2021;
+  --bg-surface: #3c3836;
+  --bg-highlight: #504945;
+  --border-color: #665c54;
+  --text-primary: #ebdbb2;
+  --text-muted: #928374;
+  --text-subtle: #83a598;
+
+  --accent-cyan: #8ec07c;
+  --accent-blue: #83a598;
+  --accent-magenta: #d3869b;
+  --accent-green: #b8bb26;
+  --accent-orange: #fe8019;
+  --accent-yellow: #fabd2f;
+  --accent-red: #fb4934;
+
+  --lualine-mode-bg: #fabd2f;
+  --lualine-mode-fg: #1d2021;
+  --lualine-git-bg: #3c3836;
+  --lualine-git-fg: #fabd2f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', 'Noto Sans JP', monospace;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar for terminal look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Neovim Cursor effect */
+.cursor-block {
+  display: inline-block;
+  width: 9px;
+  height: 1.15em;
+  vertical-align: text-bottom;
+  background-color: var(--text-primary);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* File tree styling */
+.tree-item {
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.tree-item.active {
+  background-color: var(--bg-surface);
+  color: var(--accent-cyan);
+  font-weight: 600;
+  border-left: 2px solid var(--accent-cyan);
+}
+.tree-item:hover:not(.active) {
+  background-color: var(--bg-highlight);
+}
+
+/* Tab bar */
+.nvim-tab {
+  border-top: 2px solid transparent;
+  transition: all 0.15s ease;
+}
+.nvim-tab.active {
+  background-color: var(--bg-primary);
+  border-top-color: var(--accent-blue);
+  color: var(--accent-cyan);
+}
+.nvim-tab:hover:not(.active) {
+  background-color: var(--bg-highlight);
+}
+
+/* Gutter line numbers */
+.line-numbers {
+  user-select: none;
+  color: var(--text-muted);
+  text-align: right;
+  padding-right: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+.code-content {
+  line-height: 1.625;
+}
+
+/* Syntax highlight simulation classes */
+.syn-comment { color: var(--text-muted); font-style: italic; }
+.syn-keyword { color: var(--accent-magenta); font-weight: 600; }
+.syn-string { color: var(--accent-green); }
+.syn-number { color: var(--accent-orange); }
+.syn-func { color: var(--accent-blue); }
+.syn-type { color: var(--accent-yellow); }
+.syn-prop { color: var(--accent-cyan); }
+.syn-punct { color: var(--border-color); }
+.syn-tag { color: var(--accent-red); }
+
+/* Scanline / CRT overlay subtle effect (optional toggle) */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.15) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Notification popup */
+.cmd-notification {
+  animation: slideInUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
