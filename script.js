@@ -176,7 +176,7 @@ function renderRawCode(fileKey) {
 
     case "contact.sh":
       rawText = `#!/usr/bin/env bash\n\n` +
-        `# Contact Touya Takahashi\n` +
+        `# Contact ${PORTFOLIO_DATA.profile.displayName}\n` +
         `EMAIL="${PORTFOLIO_DATA.contact.email}"\n` +
         `PGP_FINGERPRINT="${PORTFOLIO_DATA.contact.pgpKeyId}"\n` +
         `STATUS="${PORTFOLIO_DATA.contact.availability}"\n\n` +

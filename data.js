@@ -5,7 +5,7 @@
 const PORTFOLIO_DATA = {
   profile: {
     username: "touya",
-    displayName: "Touya Takahashi",
+    displayName: "Touya Ikai",
     role: "Full-Stack Developer / Systems Architect",
     location: "Tokyo, Japan",
     bio: [
