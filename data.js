@@ -16,7 +16,7 @@ const PORTFOLIO_DATA = {
     avatarUrl: "https://api.dicebear.com/7.x/bottts/svg?seed=Touya&backgroundColor=1f2335",
     statusMessage: "💡 常に新しい技術と効率的な開発環境を探求中",
     socials: [
-      { name: "GitHub", url: "https://github.com/example", icon: "fab fa-github", handle: "@touya" },
+      { name: "GitHub", url: "https://github.com/Tooyaes", icon: "fab fa-github", handle: "@Tooyaes" },
       { name: "X (Twitter)", url: "https://x.com/example", icon: "fab fa-x-twitter", handle: "@touya_dev" },
       { name: "Zenn", url: "https://zenn.dev", icon: "fas fa-book-open", handle: "touya" },
       { name: "Qiita", url: "https://qiita.com", icon: "fas fa-feather-alt", handle: "touya" }
