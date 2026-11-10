@@ -13,7 +13,7 @@ const PORTFOLIO_DATA = {
       "パフォーマンスチューニングとCLI / ターミナルツールが好物です。",
       "NeovimとRust / TypeScriptをこよなく愛しています。"
     ],
-    avatarUrl: "https://api.dicebear.com/7.x/bottts/svg?seed=Touya&backgroundColor=1f2335",
+    avatarUrl: "images/name-r-jelly.png",
     statusMessage: "💡 常に新しい技術と効率的な開発環境を探求中",
     socials: [
       { name: "GitHub", url: "https://github.com/Tooyaes", icon: "fab fa-github", handle: "@Tooyaes" },

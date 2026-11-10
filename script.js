@@ -207,7 +207,7 @@ function renderRenderedUI(fileKey) {
           <!-- Profile Banner -->
           <div class="p-6 rounded-lg bg-[var(--bg-surface)] border border-[var(--border-color)] flex flex-col md:flex-row items-center gap-6">
             <div class="relative">
-              <img src="${PORTFOLIO_DATA.profile.avatarUrl}" alt="Avatar" class="w-24 h-24 rounded-full border-2 border-[var(--accent-blue)] bg-[var(--bg-secondary)] shadow-lg" />
+              <img src="${PORTFOLIO_DATA.profile.avatarUrl}" alt="Avatar" class="w-24 h-24 object-cover rounded-full border-2 border-[var(--accent-blue)] bg-[var(--bg-secondary)] shadow-lg" />
               <span class="absolute bottom-1 right-1 w-4 h-4 bg-green-500 border-2 border-[var(--bg-surface)] rounded-full" title="Online / Open to work"></span>
             </div>
             <div class="flex-1 text-center md:text-left space-y-2">
